@@ -201,7 +201,7 @@ function MyComponent() {
 				{ name: 'Opony Rubino niebieskie', value: tiresRubinoBlue },
 				{ name: 'Opony Rubino czerwone', value: tiresRubinoRed },
 				{ name: 'Opony Rubino żółte', value: tiresRubinoYellow },
-				{ name: 'Opony Gatorskin', value: tiresGatorskin },
+                { name: 'Opony Gatorskin', value: tiresGatorskin },
 				{ name: 'Opony Grandprix', value: tiresGrandprix },
 				{ name: 'Opony Standard', value: tiresStandard },
 			],
@@ -260,15 +260,8 @@ function MyComponent() {
 							)
 						})}
 					</div>
-					<div
-						className='container'
-						style={{
-							display: 'flex',
-							justifyContent: 'flex-start',
-							alignItems: 'center',
-							width: '100%',
-							padding: '20px 0px',
-						}}>
+					<div className='container'
+						style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', width: '100%',padding:'20px 0px'}}>
 						<p style={{ padding: '10px', fontSize: '25px', fontWeight: 'bold' }}>
 							Wybierz odpowiednie dla siebie komponenty w celu utworzenia wymarzonego roweru:
 						</p>
@@ -281,9 +274,9 @@ function MyComponent() {
 							width: '100%',
 							height: '100%',
 							backgroundColor: '#bababa',
-							borderRight: '5px solid black',
-							borderLeft: '5px solid black',
-							borderTop: '4px solid black',
+                            borderRight:'5px solid black',
+                            borderLeft:'5px solid black',
+                            borderTop:'4px solid black'
 						}}>
 						<CalyBoxZkolorami>
 							<span className='center'>
