@@ -8,9 +8,9 @@ function Footer() {
 	const website = 'https://www.sklep-z-pedalami.pl'
 
 	return (
-		<footer style={{ backgroundColor: '#A8DADC' }}>
+		<footer style={{backgroundColor: '#A8DADC' }}>
 			<div className='container'>
-				<div style={{ height: '15vh', marginTop: '100px', display: 'flex', justifyContent: 'space-around' }}>
+				<div style={{  marginTop: '50px', display: 'flex', justifyContent: 'space-around' }}>
 					<div style={{ display: 'flex', justifyContent: 'center', alignItem: 'center', flexDirection: 'column' }}>
 						<a href='#'>
 							<p className='logo'>
@@ -39,7 +39,7 @@ function Footer() {
 							<b>Strona internetowa:</b> <a href={website}>{website}</a>
 						</p>
 					</div>
-					<div className='social-media' style={{ display: 'flex', justifyContent: 'center', alignItem: 'center', flexDirection: 'column',fontSize:'30px' }}>
+					<div className='social-media' style={{ paddingTop:'15px',display: 'flex', justifyContent: 'center', alignItem: 'center', flexDirection: 'column',fontSize:'30px' }}>
 						<a href='https://www.facebook.com'>
 							<FaFacebookSquare style={{color:'#3b5998'}}/>
 						</a>
@@ -51,7 +51,7 @@ function Footer() {
 						</a>
 					</div>
 				</div>
-                <p style={{ display: 'flex', justifyContent: 'center'}}>© 2023 Sklep z pedałami</p>
+                <p style={{ display: 'flex', justifyContent: 'center',paddingBottom:'10px'}}>© 2023 Sklep z pedałami</p>
 			</div>
 		</footer>
 	)

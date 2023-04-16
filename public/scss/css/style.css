@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-	max-width: 1600px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -33,7 +33,9 @@ a {
 .konfiguration {
 	font-size: 25px;
 }
-
+.login {
+	font-size: 25px;
+}
 .logo {
 	font-size: 35px;
 	color: #457b9d;
@@ -72,8 +74,15 @@ option {
 
 .rotating {
 	animation: rotate 20s linear infinite;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+	opacity: 0.3;
+	z-index: -999;
+	position: absolute;
+	top: -350px;
+	left: 170px;
 }
-
 @keyframes rotate {
 	100% {
 		transform: rotate(360deg);

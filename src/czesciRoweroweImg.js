@@ -186,7 +186,7 @@ function MyComponent() {
 	return (
 		<section>
 			<div>
-				<p style={{ fontSize: '33px', textAlign: 'center', fontWeight: 'bold', margin: '30px' }}>
+				<p style={{ fontSize: '33px', textAlign: 'center', fontWeight: 'bold', padding: '40px' }}>
 					SKONFIGURUJ SWÓJ ROWER
 				</p>
 				<div
@@ -220,127 +220,125 @@ function MyComponent() {
 
 					<div
 						style={{
-							height: '400px',
+							height: 'auto',
 							flexWrap: 'wrap',
 							display: 'flex',
 							justifyContent: 'center',
 							alignItems: 'flex-start',
 							margin: '50px',
 						}}>
-						<div className='container' style={{ display: 'flex', border: '4px solid black' }}>
-							<CalyBoxZkolorami>
-								<span className='center'>
-									<strong>KIEROWNICE</strong>
-								</span>
-								<div style={{ display: 'flex', flexDirection: 'column' }}>
-									<select
-										ref={handlebarsRef}
-										onChange={event => {
-											if (event.target.value === 'Wybierz opcje') {
-												brooksRiseRef.current.disabled = true
-												brooksDropRef.current.disabled = true
-												brooksCafeRef.current.disabled = true
-												brooksBullRef.current.disabled = true
-											} else if (event.target.value === 'Kierownica Rise') {
-												brooksRiseRef.current.disabled = false
-												brooksBullRef.current.disabled = true
-												brooksCafeRef.current.disabled = true
-												brooksDropRef.current.disabled = true
-											} else if (event.target.value === 'Kierownica Drop') {
-												brooksDropRef.current.disabled = false
-												brooksBullRef.current.disabled = true
-												brooksCafeRef.current.disabled = true
-												brooksRiseRef.current.disabled = true
-											} else if (event.target.value === 'Kierownica Cafe') {
-												brooksCafeRef.current.disabled = false
-												brooksBullRef.current.disabled = true
-												brooksDropRef.current.disabled = true
-												brooksRiseRef.current.disabled = true
-											} else if (event.target.value === 'Kierownica Bull') {
-												brooksBullRef.current.disabled = false
-												brooksCafeRef.current.disabled = true
-												brooksDropRef.current.disabled = true
-												brooksRiseRef.current.disabled = true
-											}
-											handleButtonClick(handleBarImages[event.target.value], 'handleBar')
-										}}>
-										<option value='Wybierz opcje'>Wybierz opcje</option>
-										<option value='Kierownica Rise'>Kierownica Rise</option>
-										<option value='Kierownica Drop'>Kierownica Drop</option>
-										<option value='Kierownica Cafe'>Kierownica Cafe</option>
-										<option value='Kierownica Bull'>Kierownica Bull</option>
-									</select>
-								</div>
-							</CalyBoxZkolorami>
-							<CalyBoxZkolorami>
-								<span className='center'>
-									<strong>KOLORY KIEROWNICY RISE</strong>
-								</span>
-								<div style={{ display: 'flex', flexDirection: 'column' }}>
-									<select
-										ref={brooksRiseRef}
-										name='brooksRise'
-										onChange={event => handleButtonClick(brooksRiseImages[event.target.value], 'brooksRiser')}>
-										{Object.keys(brooksRiseImages).map(key => (
-											<option key={key} value={key}>
-												{key}
-											</option>
-										))}
-									</select>
-								</div>
-							</CalyBoxZkolorami>
-							<CalyBoxZkolorami>
-								<span className='center'>
-									<strong>KOLORY KIEROWNICY DROP</strong>
-								</span>
-								<div style={{ display: 'flex', flexDirection: 'column' }}>
-									<select
-										ref={brooksDropRef}
-										name='brooksDrop'
-										onChange={event => handleButtonClick(brooksDropImages[event.target.value], 'brooksDrop')}>
-										{Object.keys(brooksDropImages).map(key => (
-											<option key={key} value={key}>
-												{key}
-											</option>
-										))}
-									</select>
-								</div>
-							</CalyBoxZkolorami>
-							<CalyBoxZkolorami>
-								<span className='center'>
-									<strong>KOLORY KIEROWNICY CAFE</strong>
-								</span>
-								<div style={{ display: 'flex', flexDirection: 'column' }}>
-									<select
-										ref={brooksCafeRef}
-										name='brooksCafe'
-										onChange={event => handleButtonClick(brooksCafeImages[event.target.value], 'brooksCafe')}>
-										{Object.keys(brooksCafeImages).map(key => (
-											<option key={key} value={key}>
-												{key}
-											</option>
-										))}
-									</select>
-								</div>
-							</CalyBoxZkolorami>
-							<CalyBoxZkolorami>
-								<span className='center'>
-									<strong>KOLORY KIEROWNICY BULL</strong>
-								</span>
-								<div style={{ display: 'flex', flexDirection: 'column' }}>
-									<select
-										ref={brooksBullRef}
-										name='brooksBull'
-										onChange={event => handleButtonClick(brooksBullImages[event.target.value], 'brooksBull')}>
-										{Object.keys(brooksBullImages).map(key => (
-											<option key={key} value={key}>
-												{key}
-											</option>
-										))}
-									</select>
-								</div>
-							</CalyBoxZkolorami>
-						</div>
+						<CalyBoxZkolorami>
+							<span className='center'>
+								<strong>KIEROWNICE</strong>
+							</span>
+							<div style={{ display: 'flex', flexDirection: 'column' }}>
+								<select
+									ref={handlebarsRef}
+									onChange={event => {
+										if (event.target.value === 'Wybierz opcje') {
+											brooksRiseRef.current.disabled = true
+											brooksDropRef.current.disabled = true
+											brooksCafeRef.current.disabled = true
+											brooksBullRef.current.disabled = true
+										} else if (event.target.value === 'Kierownica Rise') {
+											brooksRiseRef.current.disabled = false
+											brooksBullRef.current.disabled = true
+											brooksCafeRef.current.disabled = true
+											brooksDropRef.current.disabled = true
+										} else if (event.target.value === 'Kierownica Drop') {
+											brooksDropRef.current.disabled = false
+											brooksBullRef.current.disabled = true
+											brooksCafeRef.current.disabled = true
+											brooksRiseRef.current.disabled = true
+										} else if (event.target.value === 'Kierownica Cafe') {
+											brooksCafeRef.current.disabled = false
+											brooksBullRef.current.disabled = true
+											brooksDropRef.current.disabled = true
+											brooksRiseRef.current.disabled = true
+										} else if (event.target.value === 'Kierownica Bull') {
+											brooksBullRef.current.disabled = false
+											brooksCafeRef.current.disabled = true
+											brooksDropRef.current.disabled = true
+											brooksRiseRef.current.disabled = true
+										}
+										handleButtonClick(handleBarImages[event.target.value], 'handleBar')
+									}}>
+									<option value='Wybierz opcje'>Wybierz opcje</option>
+									<option value='Kierownica Rise'>Kierownica Rise</option>
+									<option value='Kierownica Drop'>Kierownica Drop</option>
+									<option value='Kierownica Cafe'>Kierownica Cafe</option>
+									<option value='Kierownica Bull'>Kierownica Bull</option>
+								</select>
+							</div>
+						</CalyBoxZkolorami>
+						<CalyBoxZkolorami>
+							<span className='center'>
+								<strong>KOLORY KIEROWNICY RISE</strong>
+							</span>
+							<div style={{ display: 'flex', flexDirection: 'column' }}>
+								<select
+									ref={brooksRiseRef}
+									name='brooksRise'
+									onChange={event => handleButtonClick(brooksRiseImages[event.target.value], 'brooksRiser')}>
+									{Object.keys(brooksRiseImages).map(key => (
+										<option key={key} value={key}>
+											{key}
+										</option>
+									))}
+								</select>
+							</div>
+						</CalyBoxZkolorami>
+						<CalyBoxZkolorami>
+							<span className='center'>
+								<strong>KOLORY KIEROWNICY DROP</strong>
+							</span>
+							<div style={{ display: 'flex', flexDirection: 'column' }}>
+								<select
+									ref={brooksDropRef}
+									name='brooksDrop'
+									onChange={event => handleButtonClick(brooksDropImages[event.target.value], 'brooksDrop')}>
+									{Object.keys(brooksDropImages).map(key => (
+										<option key={key} value={key}>
+											{key}
+										</option>
+									))}
+								</select>
+							</div>
+						</CalyBoxZkolorami>
+						<CalyBoxZkolorami>
+							<span className='center'>
+								<strong>KOLORY KIEROWNICY CAFE</strong>
+							</span>
+							<div style={{ display: 'flex', flexDirection: 'column' }}>
+								<select
+									ref={brooksCafeRef}
+									name='brooksCafe'
+									onChange={event => handleButtonClick(brooksCafeImages[event.target.value], 'brooksCafe')}>
+									{Object.keys(brooksCafeImages).map(key => (
+										<option key={key} value={key}>
+											{key}
+										</option>
+									))}
+								</select>
+							</div>
+						</CalyBoxZkolorami>
+						<CalyBoxZkolorami>
+							<span className='center'>
+								<strong>KOLORY KIEROWNICY BULL</strong>
+							</span>
+							<div style={{ display: 'flex', flexDirection: 'column' }}>
+								<select
+									ref={brooksBullRef}
+									name='brooksBull'
+									onChange={event => handleButtonClick(brooksBullImages[event.target.value], 'brooksBull')}>
+									{Object.keys(brooksBullImages).map(key => (
+										<option key={key} value={key}>
+											{key}
+										</option>
+									))}
+								</select>
+							</div>
+						</CalyBoxZkolorami>
 
 						<CalyBoxZkolorami>
 							<span className='center'>

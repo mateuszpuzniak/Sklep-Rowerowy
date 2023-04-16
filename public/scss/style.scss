@@ -8,7 +8,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 .container {
-	max-width: 1600px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 a {
@@ -25,6 +25,9 @@ a {
 	font-size: 25px;
 }
 .konfiguration {
+	font-size: 25px;
+}
+.login {
 	font-size: 25px;
 }
 .logo {
@@ -62,6 +65,14 @@ option {
 }
 .rotating {
 	animation: rotate 20s linear infinite;
+	width: 100%;
+	height: auto;
+	pointer-events: none;
+	opacity: 0.3;
+	z-index: -999;
+	position: absolute;
+	top: -350px;
+	left: 170px;
 }
 @keyframes rotate {
 	100% {

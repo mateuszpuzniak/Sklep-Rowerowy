@@ -1,16 +1,16 @@
 import React from 'react'
-import GrayWheel from './test'
+
+import wheel from './img/oponaAnimowana.png'
 
 function Text() {
 	return (
 		<section style={{ borderBottom: '3px solid black' }}>
 			<div className='container' style={{ marginTop: '60px', marginBottom: '100px' }}>
-				<GrayWheel></GrayWheel>
-				<div style={{ marginBottom: '50px' }}>
-					<h2 style={{ display: 'flex', justifyContent: 'flex-start', marginBottom: '5px', fontSize: '30px' }}>
+				<div style={{ padding: '60px' }}>
+					<h2 style={{ display: 'flex', justifyContent: 'center', marginBottom: '5px', fontSize: '30px' }}>
 						Internetowy Sklep Rowerowy
 					</h2>
-					<p style={{ fontSize: '22px' }}>
+					<p style={{ fontSize: '22px', textAlign: 'center' }}>
 						Sklep powstał, aby zapewnić Naszym Klientom szeroki wybór rowerów i akcesoriów. Staramy się sprostać Państwa
 						oczekiwaniom i z pietyzmem dobieramy kolejne kolekcje jednośladów różnych producentów. Tworzą one
 						niepowtarzalną ofertę, w której każdy odnajdzie swój wymarzony rower. Zależy nam, aby każdy z Was mógł
@@ -19,7 +19,18 @@ function Text() {
 						rozwiązaniu, w przejrzysty i szybki sposób odnajdziesz właściwy rower.
 					</p>
 				</div>
-				<div style={{ marginBottom: '50px' }}>
+				<div
+					style={{
+						width: '1000px',
+						height: 'auto',
+						display: 'flex',
+						justifyContent: 'center',
+						alignItems: 'flex',
+						position: 'relative',
+					}}>
+					<img src={wheel} alt='Koło rowerowe' className='rotating' />
+				</div>
+				<div style={{ padding: '60px' }}>
 					<h2 style={{ textAlign: 'center', marginBottom: '5px', fontSize: '30px' }}>Szeroka oferta rowerów</h2>
 					<p style={{ fontSize: '22px', textAlign: 'center' }}>
 						W naszej ofercie znajdą Państwo rowery górskie, szosowe, miejskie, trekkingowe, fitness, przełajowe i BMX.
@@ -29,11 +40,11 @@ function Text() {
 						dopasowanego do potrzeb i oczekiwań.
 					</p>
 				</div>
-				<div style={{ marginBottom: '50px' }}>
-					<h2 style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '5px', fontSize: '30px' }}>
+				<div style={{ padding: '60px' }}>
+					<h2 style={{ display: 'flex', justifyContent: 'center', marginBottom: '5px', fontSize: '30px' }}>
 						Bogactwo akcesoriów i części rowerowych
 					</h2>
-					<p style={{ fontSize: '22px', textAlign: 'right' }}>
+					<p style={{ fontSize: '22px', textAlign: 'center' }}>
 						Posiadamy również wszystko to, co niezbędne do wyposażenia Waszego roweru. Od bagażników, błotników, bidonów
 						i koszyków, przez dzwonki, liczniki, lusterka i osłony, aż po zaawansowane narzędzia, pedały, pokrowce i
 						zabezpieczenia. W naszej ofercie znajdują się również foteliki rowerowe, torby, sakwy i plecaki. Oferta

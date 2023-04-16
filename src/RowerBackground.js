@@ -9,9 +9,10 @@ function RowerBackground() {
 					top: 0,
 					left: 0,
 					width: '100%',
-					height: '100%',
+					height: '99.5%',
 					backgroundColor: 'rgba(0, 0, 0, 0.9)',
 					opacity: 0.5,
+					
 				}}/>
 			<div style={{ position: 'absolute', top: '45%', left: '50%', transform: 'translate(-50%, -50%)' }}>
 				<p style={{ color: 'white',fontSize:'50px',fontWeight:'bold',textAlign:'center',marginBottom:'30px' }}>Witaj na stronie z rowerami</p>
