@@ -73,6 +73,7 @@ function MyComponent() {
 	const imagesData = [
 		{
 			id: 1,
+
 			name: 'Kierownica Bull',
 			options: [
 				{ name: 'Czarna kierownica', value: brooksTapeBlackBull },
@@ -82,101 +83,112 @@ function MyComponent() {
 		},
 		{
 			id: 2,
+			zIndex: 2,
 			name: 'Kierownica Cafe',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksGripBlackCafe },
-				{ name: 'Brązowa kierownica', value: brooksGripBrownCafe },
-				{ name: 'Miodowa kierownica', value: brooksGripHoneyCafe },
+				{ name: 'Czarna kierownica', value: brooksGripBlackCafe, zIndex: 2 },
+				{ name: 'Brązowa kierownica', value: brooksGripBrownCafe, zIndex: 2 },
+				{ name: 'Miodowa kierownica', value: brooksGripHoneyCafe, zIndex: 2 },
 			],
 		},
 		{
 			id: 3,
+			zIndex: 2,
 			name: 'Kierownica Drop',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksTapeBlackDrop },
-				{ name: 'Brązowa kierownica', value: brooksTapeBrownDrop },
-				{ name: 'Miodowa kierownica', value: brooksTapeHoneyDrop },
+				{ name: 'Czarna kierownica', value: brooksTapeBlackDrop, zIndex: 2 },
+				{ name: 'Brązowa kierownica', value: brooksTapeBrownDrop, zIndex: 2 },
+				{ name: 'Miodowa kierownica', value: brooksTapeHoneyDrop, zIndex: 2 },
 			],
 		},
 		{
 			id: 4,
+			zIndex: 2,
 			name: 'Kierownica Rise',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksGripBlackRise },
-				{ name: 'Brązowa kierownica', value: brooksGripBrownRise },
-				{ name: 'Miodowa kierownica', value: brooksGripHoneyRise },
+				{ name: 'Czarna kierownica', value: brooksGripBlackRise, zIndex: 2 },
+				{ name: 'Brązowa kierownica', value: brooksGripBrownRise, zIndex: 2 },
+				{ name: 'Miodowa kierownica', value: brooksGripHoneyRise, zIndex: 2 },
 			],
 		},
 		{
 			id: 5,
+			zIndex: 1,
 			name: 'Kierownice',
 			options: [
-				{ name: 'Kierownica Rise', value: handlebarRiseBlack },
-				{ name: 'Kierownica Drop', value: handlebarDropBlack },
-				{ name: 'Kierownica Cafe', value: handlebarCafeBlack },
-				{ name: 'Kierownica Bull', value: handlebarBullBlack },
+				{ name: 'Kierownica Rise', value: handlebarRiseBlack, zIndex: 1 },
+				{ name: 'Kierownica Drop', value: handlebarDropBlack, zIndex: 1 },
+				{ name: 'Kierownica Cafe', value: handlebarCafeBlack, zIndex: 1 },
+				{ name: 'Kierownica Bull', value: handlebarBullBlack, zIndex: 1 },
 			],
 		},
 		{
 			id: 6,
+			zIndex: 1,
 			name: 'Siodełko',
 			options: [
-				{ name: 'Czarne siodełko', value: blackSaddle },
-				{ name: 'Brązowe siodełko', value: brownSaddle },
-				{ name: 'Miodowe siodełko', value: honeySaddle },
+				{ name: 'Czarne siodełko', value: blackSaddle, zIndex: 1 },
+				{ name: 'Brązowe siodełko', value: brownSaddle, zIndex: 1 },
+				{ name: 'Miodowe siodełko', value: honeySaddle, zIndex: 1 },
 			],
 		},
 		{
 			id: 7,
+			zIndex: 10,
 			name: 'Bagażnik',
-			options: [{ name: 'Bagażnik', value: cargo }],
+			options: [{ name: 'Bagażnik', value: cargo, zIndex: 10 }],
 		},
 		{
 			id: 8,
+			zIndex: 7,
 			name: 'Łańcuch',
 			options: [
-				{ name: 'Czarny łańcuch', value: chainIzumiBlack },
-				{ name: 'Złoty łańcuch', value: chainIzumiGold },
-				{ name: 'Srebrny łańcuch', value: chainIzumiSilver },
-				{ name: 'Nierdzewny łańcuch', value: chainRustBuster },
+				{ name: 'Czarny łańcuch', value: chainIzumiBlack, zIndex: 7 },
+				{ name: 'Złoty łańcuch', value: chainIzumiGold, zIndex: 7 },
+				{ name: 'Srebrny łańcuch', value: chainIzumiSilver, zIndex: 7 },
+				{ name: 'Nierdzewny łańcuch', value: chainRustBuster, zIndex: 7 },
 			],
 		},
 		{
 			id: 9,
+			zIndex: 4,
 			name: 'Rama',
 			options: [
-				{ name: 'Czarna rama', value: frameBlack },
-				{ name: 'Zielona rama', value: frameGreen },
-				{ name: 'Pomarańczowa rama', value: frameOrange },
-				{ name: 'Czerwona rama', value: frameRed },
-				{ name: 'Niebieska rama', value: frameSky },
-				{ name: 'Matowa rama', value: frameRawMatte },
+				{ name: 'Czarna rama', value: frameBlack, zIndex: 4 },
+				{ name: 'Zielona rama', value: frameGreen, zIndex: 4 },
+				{ name: 'Pomarańczowa rama', value: frameOrange, zIndex: 4 },
+				{ name: 'Czerwona rama', value: frameRed, zIndex: 4 },
+				{ name: 'Niebieska rama', value: frameSky, zIndex: 4 },
+				{ name: 'Matowa rama', value: frameRawMatte, zIndex: 4 },
 			],
 		},
 		{
 			id: 10,
+			zIndex: 5,
 			name: 'rimFrontImages',
 			options: [
-				{ name: 'Przednia czarna felga', value: rimFrontBlack },
-				{ name: 'Przednia niebieska felga', value: rimFrontBlue },
-				{ name: 'Przednia czerwona felga', value: rimFrontRed },
-				{ name: 'Przednia srebrna felga', value: rimFrontSilver },
-				{ name: 'Przednia biała felga', value: rimFrontWhite },
+				{ name: 'Przednia czarna felga', value: rimFrontBlack, zIndex: 5 },
+				{ name: 'Przednia niebieska felga', value: rimFrontBlue, zIndex: 5 },
+				{ name: 'Przednia czerwona felga', value: rimFrontRed, zIndex: 5 },
+				{ name: 'Przednia srebrna felga', value: rimFrontSilver, zIndex: 5 },
+				{ name: 'Przednia biała felga', value: rimFrontWhite, zIndex: 5 },
 			],
 		},
 		{
 			id: 11,
+			zIndex: 5,
 			name: 'rimRearImages',
 			options: [
-				{ name: 'Tylnia czarna felga', value: rimRearBlack },
-				{ name: 'Tylnia niebieska felga', value: rimRearBlue },
-				{ name: 'Tylnia czerwona felga', value: rimRearRed },
-				{ name: 'Tylnia srebrna felga', value: rimRearSilver },
-				{ name: 'Tylnia biała felga', value: rimRearWhite },
+				{ name: 'Tylnia czarna felga', value: rimRearBlack, zIndex: 5 },
+				{ name: 'Tylnia niebieska felga', value: rimRearBlue, zIndex: 5 },
+				{ name: 'Tylnia czerwona felga', value: rimRearRed, zIndex: 5 },
+				{ name: 'Tylnia srebrna felga', value: rimRearSilver, zIndex: 5 },
+				{ name: 'Tylnia biała felga', value: rimRearWhite, zIndex: 5 },
 			],
 		},
 		{
 			id: 12,
+			zIndex: 1,
 			name: 'headsetKingImages',
 			options: [
 				{ name: 'Amortyzator czarny', value: headsetKingBlack },
@@ -188,22 +200,24 @@ function MyComponent() {
 		},
 		{
 			id: 13,
+			zIndex: 6,
 			name: 'componentsImages',
 			options: [
-				{ name: 'Szprychy, pedały czarne', value: componentsBlack },
-				{ name: 'Szprychy, pedały srebrne', value: componentsSilver },
+				{ name: 'Szprychy, pedały czarne', value: componentsBlack, zIndex: 6 },
+				{ name: 'Szprychy, pedały srebrne', value: componentsSilver, zIndex: 6 },
 			],
 		},
 		{
 			id: 14,
+			zIndex: 5,
 			name: 'coloredTiresImages',
 			options: [
-				{ name: 'Opony Rubino niebieskie', value: tiresRubinoBlue },
-				{ name: 'Opony Rubino czerwone', value: tiresRubinoRed },
-				{ name: 'Opony Rubino żółte', value: tiresRubinoYellow },
-				{ name: 'Opony Gatorskin', value: tiresGatorskin },
-				{ name: 'Opony Grandprix', value: tiresGrandprix },
-				{ name: 'Opony Standard', value: tiresStandard },
+				{ name: 'Opony Rubino niebieskie', value: tiresRubinoBlue, zIndex: 5 },
+				{ name: 'Opony Rubino czerwone', value: tiresRubinoRed, zIndex: 5 },
+				{ name: 'Opony Rubino żółte', value: tiresRubinoYellow, zIndex: 5 },
+				{ name: 'Opony Gatorskin', value: tiresGatorskin, zIndex: 5 },
+				{ name: 'Opony Grandprix', value: tiresGrandprix, zIndex: 5 },
+				{ name: 'Opony Standard', value: tiresStandard, zIndex: 5 },
 			],
 		},
 	]
@@ -241,7 +255,7 @@ function MyComponent() {
 							if (!image) {
 								return null
 							}
-
+							
 							return (
 								<img
 									key={image}
@@ -254,7 +268,7 @@ function MyComponent() {
 										transform: 'translate(-50%, -50%)',
 										maxWidth: '100%',
 										maxHeight: '100%',
-										zIndex: index + 1,
+										zIndex: imagesData.find((image) => image.id === parseInt(selector)).zIndex,
 									}}
 								/>
 							)
