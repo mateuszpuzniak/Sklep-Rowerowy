@@ -76,9 +76,9 @@ function MyComponent() {
 
 			name: 'Kierownica Bull',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksTapeBlackBull },
-				{ name: 'Brązowa kierownica', value: brooksTapeBrownBull },
-				{ name: 'Miodowa kierownica', value: brooksTapeHoneyBull },
+				{ name: 'Czarna kierownica', value: brooksTapeBlackBull, disabled: true },
+				{ name: 'Brązowa kierownica', value: brooksTapeBrownBull, disabled: true },
+				{ name: 'Miodowa kierownica', value: brooksTapeHoneyBull, disabled: true },
 			],
 		},
 		{
@@ -86,9 +86,9 @@ function MyComponent() {
 			zIndex: 2,
 			name: 'Kierownica Cafe',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksGripBlackCafe, zIndex: 2 },
-				{ name: 'Brązowa kierownica', value: brooksGripBrownCafe, zIndex: 2 },
-				{ name: 'Miodowa kierownica', value: brooksGripHoneyCafe, zIndex: 2 },
+				{ name: 'Czarna kierownica', value: brooksGripBlackCafe, zIndex: 2, disabled: true },
+				{ name: 'Brązowa kierownica', value: brooksGripBrownCafe, zIndex: 2, disabled: true },
+				{ name: 'Miodowa kierownica', value: brooksGripHoneyCafe, zIndex: 2, disabled: true },
 			],
 		},
 		{
@@ -96,9 +96,9 @@ function MyComponent() {
 			zIndex: 2,
 			name: 'Kierownica Drop',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksTapeBlackDrop, zIndex: 2 },
-				{ name: 'Brązowa kierownica', value: brooksTapeBrownDrop, zIndex: 2 },
-				{ name: 'Miodowa kierownica', value: brooksTapeHoneyDrop, zIndex: 2 },
+				{ name: 'Czarna kierownica', value: brooksTapeBlackDrop, zIndex: 2, disabled: true },
+				{ name: 'Brązowa kierownica', value: brooksTapeBrownDrop, zIndex: 2, disabled: true },
+				{ name: 'Miodowa kierownica', value: brooksTapeHoneyDrop, zIndex: 2, disabled: true },
 			],
 		},
 		{
@@ -106,9 +106,9 @@ function MyComponent() {
 			zIndex: 2,
 			name: 'Kierownica Rise',
 			options: [
-				{ name: 'Czarna kierownica', value: brooksGripBlackRise, zIndex: 2 },
-				{ name: 'Brązowa kierownica', value: brooksGripBrownRise, zIndex: 2 },
-				{ name: 'Miodowa kierownica', value: brooksGripHoneyRise, zIndex: 2 },
+				{ name: 'Czarna kierownica', value: brooksGripBlackRise, zIndex: 2, disabled: true },
+				{ name: 'Brązowa kierownica', value: brooksGripBrownRise, zIndex: 2, disabled: true },
+				{ name: 'Miodowa kierownica', value: brooksGripHoneyRise, zIndex: 2, disabled: true },
 			],
 		},
 		{
@@ -151,7 +151,7 @@ function MyComponent() {
 		},
 		{
 			id: 9,
-			zIndex: 4,
+			zIndex: 6,
 			name: 'Rama',
 			options: [
 				{ name: 'Czarna rama', value: frameBlack, zIndex: 4 },
@@ -226,10 +226,11 @@ function MyComponent() {
 	const brooksCafeRef = useRef(null)
 	const brooksDropRef = useRef(null)
 	const brooksRiseRef = useRef(null)
-	let handlebarsRef
+	const handlebarsRef = useRef(null)
+
+	
 
 	const [selectedImages, setSelectedImages] = useState({})
-
 	const handleSelectChange = (event, selector) => {
 		const images = imagesData.find(images => images.id === selector)
 		const selectedOption = images.options.find(option => option.value === event.target.value)
@@ -238,6 +239,33 @@ function MyComponent() {
 			...prev,
 			[selector]: selectedImage,
 		}))
+		const selectedValue = event.target.value
+		if (selectedValue === 'Wybierz kierownice') {
+			brooksRiseRef.current.style.display = 'none'
+			brooksBullRef.current.style.display = 'none'
+			brooksCafeRef.current.style.display = 'none'
+			brooksDropRef.current.style.display = 'none'
+		} else if (selectedValue === handlebarRiseBlack) {
+			brooksRiseRef.current.style.display = 'block'
+			brooksBullRef.current.style.display = 'none'
+			brooksCafeRef.current.style.display = 'none'
+			brooksDropRef.current.style.display = 'none'
+		} else if (selectedValue === handlebarDropBlack) {
+			brooksDropRef.current.style.display = 'block'
+			brooksBullRef.current.style.display = 'none'
+			brooksCafeRef.current.style.display = 'none'
+			brooksRiseRef.current.style.display = 'none'
+		} else if (selectedValue === handlebarCafeBlack) {
+			brooksCafeRef.current.style.display = 'block'
+			brooksBullRef.current.style.display = 'none'
+			brooksDropRef.current.style.display = 'none'
+			brooksRiseRef.current.style.display = 'none'
+		} else if (selectedValue === handlebarBullBlack) {
+			brooksBullRef.current.style.display = 'block'
+			brooksDropRef.current.style.display = 'none'
+			brooksCafeRef.current.style.display = 'none'
+			brooksRiseRef.current.style.display = 'none'
+		}
 	}
 
 	return (
@@ -255,7 +283,7 @@ function MyComponent() {
 							if (!image) {
 								return null
 							}
-							
+
 							return (
 								<img
 									key={image}
@@ -268,7 +296,7 @@ function MyComponent() {
 										transform: 'translate(-50%, -50%)',
 										maxWidth: '100%',
 										maxHeight: '100%',
-										zIndex: imagesData.find((image) => image.id === parseInt(selector)).zIndex,
+										zIndex: imagesData.find(image => image.id === parseInt(selector)).zIndex,
 									}}
 								/>
 							)
@@ -305,7 +333,7 @@ function MyComponent() {
 							</span>
 							<div style={{ display: 'flex', flexDirection: 'column' }}>
 								<select ref={handlebarsRef} style={{ width: 'auto' }} onChange={event => handleSelectChange(event, 5)}>
-									<option value=''>Wybierz kierownice</option>
+									<option value='Wybierz kierownice'>Wybierz kierownice</option>
 									{imagesData[4].options.map(option => (
 										<option key={option.value} value={option.value}>
 											{option.name}
@@ -322,7 +350,7 @@ function MyComponent() {
 								<select
 									ref={brooksRiseRef}
 									id='4'
-									style={{ width: 'auto' }}
+									style={{ width: 'auto', display: 'none' }}
 									onChange={event => handleSelectChange(event, 4)}>
 									<option value=''>Kolor Rise</option>
 									{imagesData[3].options.map(option => (
@@ -341,7 +369,7 @@ function MyComponent() {
 								<select
 									ref={brooksDropRef}
 									id='3'
-									style={{ width: 'auto' }}
+									style={{ width: 'auto', display: 'none' }}
 									onChange={event => handleSelectChange(event, 3)}>
 									<option value=''>Kolor Drop</option>
 									{imagesData[2].options.map(option => (
@@ -360,7 +388,7 @@ function MyComponent() {
 								<select
 									ref={brooksCafeRef}
 									id='2'
-									style={{ width: 'auto' }}
+									style={{ width: 'auto', display: 'none' }}
 									onChange={event => handleSelectChange(event, 2)}>
 									<option value=''>Kolor Cafe</option>
 									{imagesData[1].options.map(option => (
@@ -379,7 +407,7 @@ function MyComponent() {
 								<select
 									ref={brooksBullRef}
 									id='1'
-									style={{ width: 'auto' }}
+									style={{ width: 'auto', display: 'none' }}
 									onChange={event => handleSelectChange(event, 1)}>
 									<option value=''>Kolor Bull</option>
 									{imagesData[0].options.map(option => (
