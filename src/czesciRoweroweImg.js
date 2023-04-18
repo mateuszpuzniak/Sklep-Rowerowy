@@ -73,7 +73,6 @@ function MyComponent() {
 	const imagesData = [
 		{
 			id: 1,
-
 			name: 'Kierownica Bull',
 			options: [
 				{ name: 'Czarna kierownica', value: brooksTapeBlackBull, disabled: true },
@@ -228,8 +227,14 @@ function MyComponent() {
 	const brooksRiseRef = useRef(null)
 	const handlebarsRef = useRef(null)
 
-	
 
+
+	const [selected, setSelected] = useState(imagesData[0].options[0].value)
+	const handleChange = event => {
+		const selectedOptionFromSelect = event.target.value
+		console.log(selectedOptionFromSelect)
+		setSelected(selectedOptionFromSelect)
+	}
 	const [selectedImages, setSelectedImages] = useState({})
 	const handleSelectChange = (event, selector) => {
 		const images = imagesData.find(images => images.id === selector)
@@ -239,6 +244,13 @@ function MyComponent() {
 			...prev,
 			[selector]: selectedImage,
 		}))
+		handleChange(event)
+
+		const selectedOptionSelect = event.target.value;
+		console.log(selectedOptionSelect);
+
+
+
 		const selectedValue = event.target.value
 		if (selectedValue === 'Wybierz kierownice') {
 			brooksRiseRef.current.style.display = 'none'
@@ -332,7 +344,8 @@ function MyComponent() {
 								<strong>KIEROWNICE</strong>
 							</span>
 							<div style={{ display: 'flex', flexDirection: 'column' }}>
-								<select ref={handlebarsRef} style={{ width: 'auto' }} onChange={event => handleSelectChange(event, 5)}>
+								<select value={selected} ref={handlebarsRef} style={{ width: 'auto' }} 
+								onChange={event => handleSelectChange(event, 5)}autoFocus={true}>
 									<option value='Wybierz kierownice'>Wybierz kierownice</option>
 									{imagesData[4].options.map(option => (
 										<option key={option.value} value={option.value}>
@@ -554,7 +567,7 @@ function MyComponent() {
 							</div>
 						</CalyBoxZkolorami>
 					</div>
-					<button>Sprawdź wybór</button>
+					{/* <button onClick={handleButtonClick}>Sprawdź wybór</button> */}
 				</div>
 			</div>
 		</section>
