@@ -19,7 +19,7 @@ function Footer() {
 								</span>{' '}
 								<span style={{ color: '#457B9D' }}>z</span>{' '}
 								<span style={{ color: '#457B9D' }}>
-									<span style={{ color: '#1D3557' }}>P</span>edałam<span style={{ color: '#1D3557' }}>i</span>
+									<span style={{ color: '#1D3557' }}>R</span>owerami<span style={{ color: '#1D3557' }}>i</span>
 								</span>
 							</p>
 						</a>
