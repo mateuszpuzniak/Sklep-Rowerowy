@@ -227,14 +227,12 @@ function MyComponent() {
 	const brooksRiseRef = useRef(null)
 	const handlebarsRef = useRef(null)
 
-
-
-	const [selected, setSelected] = useState(imagesData[0].options[0].value)
-	const handleChange = event => {
-		const selectedOptionFromSelect = event.target.value
-		console.log(selectedOptionFromSelect)
-		setSelected(selectedOptionFromSelect)
-	}
+	// const [selected, setSelected] = useState(imagesData[0].options[0].value)
+	// const handleChange = event => {
+	// 	const selectedOptionFromSelect = event.target.value
+	// 	console.log(selectedOptionFromSelect)
+	// 	setSelected(selectedOptionFromSelect)
+	// }
 	const [selectedImages, setSelectedImages] = useState({})
 	const handleSelectChange = (event, selector) => {
 		const images = imagesData.find(images => images.id === selector)
@@ -244,20 +242,19 @@ function MyComponent() {
 			...prev,
 			[selector]: selectedImage,
 		}))
-		handleChange(event)
-
-		const selectedOptionSelect = event.target.value;
-		console.log(selectedOptionSelect);
-
-
 
 		const selectedValue = event.target.value
 		if (selectedValue === 'Wybierz kierownice') {
+			setSelectedImages({})
+			handlebarsRef.current.value = 'Wybierz kierownice'
+
 			brooksRiseRef.current.style.display = 'none'
 			brooksBullRef.current.style.display = 'none'
 			brooksCafeRef.current.style.display = 'none'
 			brooksDropRef.current.style.display = 'none'
-		} else if (selectedValue === handlebarRiseBlack) {
+			return
+		}
+		if (selectedValue === handlebarRiseBlack) {
 			brooksRiseRef.current.style.display = 'block'
 			brooksBullRef.current.style.display = 'none'
 			brooksCafeRef.current.style.display = 'none'
@@ -279,7 +276,6 @@ function MyComponent() {
 			brooksRiseRef.current.style.display = 'none'
 		}
 	}
-
 	return (
 		<section>
 			<div>
@@ -344,8 +340,11 @@ function MyComponent() {
 								<strong>KIEROWNICE</strong>
 							</span>
 							<div style={{ display: 'flex', flexDirection: 'column' }}>
-								<select value={selected} ref={handlebarsRef} style={{ width: 'auto' }} 
-								onChange={event => handleSelectChange(event, 5)}autoFocus={true}>
+								<select
+									ref={handlebarsRef}
+									style={{ width: 'auto' }}
+									onChange={event => handleSelectChange(event, 5, 'select1')}
+									autoFocus={true}>
 									<option value='Wybierz kierownice'>Wybierz kierownice</option>
 									{imagesData[4].options.map(option => (
 										<option key={option.value} value={option.value}>
