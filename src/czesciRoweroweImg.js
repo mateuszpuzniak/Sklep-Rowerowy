@@ -227,13 +227,13 @@ function MyComponent() {
 	const brooksRiseRef = useRef(null);
 	const handlebarsRef = useRef(null);
 
-	// const [kierownica, setKierownica] = useState('Wybierz kierownice')
-	// const handleChange = e => {
-	// 	setKierownica(e.target.value)
-	// }
-	// useEffect(() => {
-	// 	console.log(kierownica)
-	// }, [kierownica])
+	const [kierownica, setKierownica] = useState('Wybierz kierownice')
+	const handleChange = e => {
+		setKierownica(e.target.value)
+	}
+	useEffect(() => {
+		console.log(kierownica)
+	}, [kierownica])
 	const [selected, setSelected] = useState(imagesData[0].options[0].value);
 	
 	const [selectedImages, setSelectedImages] = useState({});
@@ -290,14 +290,13 @@ function MyComponent() {
 					className="container"
 					style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
 					<div className="bikeElements" style={{ position: "relative", width: "100%", height: "500px" }}>
-						{Object.keys(selectedImages).map((selector, index) => {
+						{Object.keys(selectedImages).map((selector) => {
 							console.log(selector);
 							const selectedValue = selectedImages[selector];
 							console.log("selectedValue", selectedValue);
 							if (!selectedValue) {
 								return null;
 							}
-
 							return (
 								<img
 									key={selectedValue.image}
