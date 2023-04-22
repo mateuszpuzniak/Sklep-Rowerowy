@@ -5,10 +5,10 @@ function Footer() {
 	const phoneNumbers = ['555-345-678']
 	const address = 'ul. Przykładowa 1, 00-000 Warszawa'
 	const email = 'kontakt@przykladowa-firma.pl'
-	const website = 'https://www.sklep-z-pedalami.pl'
+	const website = 'https://www.sklep-z-rowerami.pl'
 
 	return (
-		<footer style={{backgroundColor: '#A8DADC' }}>
+		<footer id='contact' style={{backgroundColor: '#A8DADC' }}>
 			<div className='container'>
 				<div style={{  marginTop: '50px', display: 'flex', justifyContent: 'space-around' }}>
 					<div style={{ display: 'flex', justifyContent: 'center', alignItem: 'center', flexDirection: 'column' }}>
@@ -51,7 +51,7 @@ function Footer() {
 						</a>
 					</div>
 				</div>
-                <p style={{ display: 'flex', justifyContent: 'center',paddingBottom:'10px'}}>© 2023 Sklep z pedałami</p>
+                <p style={{ display: 'flex', justifyContent: 'center',paddingBottom:'10px'}}>© 2023 Sklep z Rowerami</p>
 			</div>
 		</footer>
 	)

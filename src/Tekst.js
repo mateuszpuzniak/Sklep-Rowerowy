@@ -4,8 +4,9 @@ import wheel from './img/oponaAnimowana.png'
 
 function Text() {
 	return (
-		<section style={{ borderBottom: '3px solid black' }}>
+		<section id='about' style={{ borderBottom: '3px solid black' }}>
 			<div className='container' style={{ marginTop: '60px', marginBottom: '100px' }}>
+				<h2  style={{ display: 'flex', justifyContent: 'center', paddingBottom: '50px', fontSize: '33px' }}>ABOUT US</h2>
 				<div style={{ padding: '60px' }}>
 					<h2 style={{ display: 'flex', justifyContent: 'center', marginBottom: '5px', fontSize: '30px' }}>
 						Internetowy Sklep Rowerowy

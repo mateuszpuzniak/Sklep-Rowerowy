@@ -9,9 +9,9 @@ function Navigation() {
                 <div className='container' style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <ul style={{listStyleType: 'none', maxWidth:'1400px',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <li style={{display: 'inline-block',padding:'0px 90px'}}><a href='#'><p className='logo'><span style={{color:'#457B9D'}}><span style={{color:'#1D3557'}}>S</span>kle<span style={{color:'#1D3557'}}>p</span></span> <span style={{color:'#457B9D'}}>z</span> <span style={{color:'#457B9D'}}><span style={{color:'#1D3557'}}>R</span>oweram<span style={{color:'#1D3557'}}>i</span></span></p></a></li>
-                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a href='#'><p className='about'>O nas</p></a></li>
-                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a className='konfiguration' href='#'>Konfigurator</a></li>
-                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a className='contact' href='#'>Kontakt</a></li>
+                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a href='#about'><p className='about'>About Us</p></a></li>
+                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a className='konfiguration' href='#konfiguration'>Konfigurator</a></li>
+                        <li style={{display: 'inline-block',padding:'0px 60px'}}><a className='contact' href='#contact'>Kontakt</a></li>
                         <li style={{display: 'inline-block',padding:'0px 60px'}}><a className='login' href='#'>Zaloguj Się</a></li>
                     </ul>
                 </div>

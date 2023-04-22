@@ -281,7 +281,7 @@ function MyComponent() {
 		}
 	};
 	return (
-		<section>
+		<section id="konfiguration">
 			<div>
 				<p style={{ fontSize: "33px", textAlign: "center", fontWeight: "bold", padding: "40px" }}>
 					SKONFIGURUJ SWÓJ ROWER
