@@ -164,7 +164,7 @@ function MyComponent() {
 		{
 			id: 10,
 			zIndex: 5,
-			name: "rimFrontImages",
+			name: "Przednia felga",
 			options: [
 				{ name: "Przednia czarna felga", value: rimFrontBlack, zIndex: 5 },
 				{ name: "Przednia niebieska felga", value: rimFrontBlue, zIndex: 5 },
@@ -176,7 +176,7 @@ function MyComponent() {
 		{
 			id: 11,
 			zIndex: 5,
-			name: "rimRearImages",
+			name: "Tylnia felga",
 			options: [
 				{ name: "Tylnia czarna felga", value: rimRearBlack, zIndex: 5 },
 				{ name: "Tylnia niebieska felga", value: rimRearBlue, zIndex: 5 },
@@ -188,7 +188,7 @@ function MyComponent() {
 		{
 			id: 12,
 			zIndex: 1,
-			name: "headsetKingImages",
+			name: "Amortyzator",
 			options: [
 				{ name: "Amortyzator czarny", value: headsetKingBlack },
 				{ name: "Amortyzator niebieski", value: headsetKingBlue },
@@ -200,7 +200,7 @@ function MyComponent() {
 		{
 			id: 13,
 			zIndex: 6,
-			name: "componentsImages",
+			name: "Szprychy, pedały",
 			options: [
 				{ name: "Szprychy, pedały czarne", value: componentsBlack, zIndex: 6 },
 				{ name: "Szprychy, pedały srebrne", value: componentsSilver, zIndex: 6 },
@@ -209,7 +209,7 @@ function MyComponent() {
 		{
 			id: 14,
 			zIndex: 5,
-			name: "coloredTiresImages",
+			name: "Opony",
 			options: [
 				{ name: "Opony Rubino niebieskie", value: tiresRubinoBlue, zIndex: 5 },
 				{ name: "Opony Rubino czerwone", value: tiresRubinoRed, zIndex: 5 },
